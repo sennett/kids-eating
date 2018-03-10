@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width">
     <style>
         html,
         body {
@@ -20,16 +22,56 @@
 <body>
     <div id="map"></div>
     <script>
+        var centre = {
+            lat: 41.402509,
+            lng: 2.170169
+        }
+        var restaurants = [{
+            name: "Restaurant Singular",
+            address: "Carrer de Sardenya, 321, 08025 Barcelona",
+            lat: 41.403922,
+            lng: 2.172328
+        }]
+
         function initMap() {
-            var uluru = { lat: -25.363, lng: 131.044 };
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
+                zoom: 15,
+                center: centre,
+                styles: [
+                    {
+                        "featureType": "poi.business",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    }
+                ]
             });
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
+
+            restaurants.forEach(function (restaurant) {
+                var marker = new google.maps.Marker({
+                    position: restaurant,
+                    map: map
+                });
+            })
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR9P_UyRtqQdYBlx6IZkju8jSgO8iWzk4&callback=initMap">
