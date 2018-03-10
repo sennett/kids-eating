@@ -22,16 +22,19 @@
 <body>
     <div id="map"></div>
     <script>
-        var centre = localStorage.getItem('mapCentreLat') ? {
-            lat: Number(localStorage.getItem('mapCentreLat')),
-            lng: Number(localStorage.getItem('mapCentreLng'))
-        } : 
-        {
+        var DEFAULT_ZOOM = 12
+        var DEFAULT_CENTRE = {
             lat: 41.3937221351275,
             lng: 2.158396155313767
         }
 
-        var zoom = localStorage.getItem('mapZoom') ? Number(localStorage.getItem('mapZoom')) : 12
+
+        var centre = localStorage.getItem('mapCentreLat') ? {
+            lat: Number(localStorage.getItem('mapCentreLat')),
+            lng: Number(localStorage.getItem('mapCentreLng'))
+        } : DEFAULT_CENTRE
+        
+        var zoom = localStorage.getItem('mapZoom') ? Number(localStorage.getItem('mapZoom')) : DEFAULT_ZOOM
 
         var restaurants = [{
             name: "Restaurant Singular",
