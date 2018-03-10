@@ -22,10 +22,17 @@
 <body>
     <div id="map"></div>
     <script>
-        var centre = {
-            lat: 41.402509,
-            lng: 2.170169
+        var centre = localStorage.getItem('mapCentreLat') ? {
+            lat: Number(localStorage.getItem('mapCentreLat')),
+            lng: Number(localStorage.getItem('mapCentreLng'))
+        } : 
+        {
+            lat: 41.3937221351275,
+            lng: 2.158396155313767
         }
+
+        var zoom = localStorage.getItem('mapZoom') ? Number(localStorage.getItem('mapZoom')) : 12
+
         var restaurants = [{
             name: "Restaurant Singular",
             address: "Carrer de Sardenya, 321, 08025 Barcelona",
@@ -55,7 +62,7 @@
 
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
+                zoom: zoom,
                 center: centre,
                 styles: [
                     {
@@ -91,6 +98,16 @@
                     position: restaurant,
                     map: map
                 });
+            })
+
+            map.addListener('center_changed', function() {
+                var latLng = map.getCenter()
+                localStorage.setItem('mapCentreLat', latLng.lat())
+                localStorage.setItem('mapCentreLng', latLng.lng())
+            })
+
+            map.addListener('zoom_changed', function() {
+                localStorage.setItem('mapZoom', map.getZoom())
             })
         }
     </script>
