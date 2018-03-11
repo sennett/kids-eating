@@ -106,8 +106,10 @@
                 ]
             });
 
-            var infowindow = new google.maps.InfoWindow()
-
+            var infowindow = new google.maps.InfoWindow({
+                maxWidth: map.getDiv().clientWidth * 2/3 // google maps doesn't seem to like this width too much 😎
+            })
+            
             restaurants.forEach(function (restaurant) {
                 var marker = new google.maps.Marker({
                     position: restaurant,
