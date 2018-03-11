@@ -106,22 +106,17 @@
                 ]
             });
 
-            var infowindows = []
+            var infowindow = new google.maps.InfoWindow()
 
             restaurants.forEach(function (restaurant) {
                 var marker = new google.maps.Marker({
                     position: restaurant,
                     map: map
                 })
-                var infowindow = new google.maps.InfoWindow({
-                    content: `<h1>${restaurant.name}</h1>`
-                })
-
-                infowindows.push(infowindow)
 
                 marker.addListener('click', function () {
-                    infowindows.forEach(function (infowindow) { infowindow.close() })
-                    infowindows = []
+                    infowindow.close()
+                    infowindow.setContent(`<h1>${restaurant.name}</h1>`)
                     infowindow.open(map, marker)
                 })
             })
