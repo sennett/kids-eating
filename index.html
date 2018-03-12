@@ -128,7 +128,14 @@
 
                 marker.addListener('click', function () {
                     infowindow.close()
-                    infowindow.setContent(`<div class="location-info-box"><h1 class="location-info-box__heading">${restaurant.name}</h1><p>${restaurant.cost}</p><p>${restaurant.emojis}</p><p>${restaurant.summary}</p><div>`)
+                    var mapsQueryParam = encodeURIComponent(restaurant.name + " " + restaurant.address)
+                    infowindow.setContent(`
+                        <div class="location-info-box">
+                            <h1 class="location-info-box__heading">${restaurant.name}</h1>
+                            <p>${restaurant.cost} ${restaurant.emojis}</p>
+                            <p>${restaurant.summary}</p>
+                            <p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${mapsQueryParam}">Open in Google Maps</a></p>
+                        <div>`)
                     infowindow.open(map, marker)
                 })
             })
