@@ -57,12 +57,18 @@
             name: "The Pudding Bar",
             address: "Carrer de Pau Claris, 90, 08010 Barcelona",
             lat: 41.390185,
-            lng: 2.140709
+            lng: 2.170693,
+            summary: "Great play area. Good for brunch. Big toadstools.",
+            emojis: "🎲☕🍷🥐🍽️",
+            cost: "$$"
         }, {
             name: "Pudding Coffee Shop",
             address: "Avinguda Diagonal, 515, 08029 Barcelona",
             lat: 41.391311,
-            lng: 2.172328
+            lng: 2.140709,
+            summary: "Great play area. Good for brunch. Harry Potter themed.",
+            emojis: "🎲☕🍷🥐🍽️",
+            cost: "$$"
         }, {
             name: "Family Room Cafe",
             address: "Carrer de Joan Gamper, 13, 08014 Barcelona",
@@ -132,7 +138,7 @@
                     infowindow.setContent(`
                         <div class="location-info-box">
                             <h1 class="location-info-box__heading">${restaurant.name}</h1>
-                            <p>${restaurant.cost} ${restaurant.emojis}</p>
+                            <p><strong>${restaurant.cost}</strong> - ${restaurant.emojis}</p>
                             <p>${restaurant.summary}</p>
                             <p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${mapsQueryParam}">Open in Google Maps</a></p>
                         <div>`)
