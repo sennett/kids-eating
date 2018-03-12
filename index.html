@@ -17,6 +17,14 @@
             height: 100%;
             width: 100%;
         }
+
+        .location-info-box {
+            max-width: 65vw;
+        }
+
+        .location-info-box__heading {
+            font-size: 1em;
+        }
     </style>
 </head>
 
@@ -40,7 +48,10 @@
             name: "Restaurant Singular",
             address: "Carrer de Sardenya, 321, 08025 Barcelona",
             lat: 41.403922,
-            lng: 2.172328
+            lng: 2.172328,
+            summary: "Great play area. Rather touristy. Average food for the price.",
+            emojis: "💺🎲🍷🍽️",
+            cost: "$$$"
             // highchairs, alcholo, playarea, food, cafe/restaurant, space, changing mat 💺🎲☕🥐🍷🍽️💩
         }, {
             name: "The Pudding Bar",
@@ -117,7 +128,7 @@
 
                 marker.addListener('click', function () {
                     infowindow.close()
-                    infowindow.setContent(`<h1>${restaurant.name}</h1>`)
+                    infowindow.setContent(`<div class="location-info-box"><h1 class="location-info-box__heading">${restaurant.name}</h1><p>${restaurant.cost}</p><p>${restaurant.emojis}</p><p>${restaurant.summary}</p><div>`)
                     infowindow.open(map, marker)
                 })
             })
