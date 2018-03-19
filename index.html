@@ -103,6 +103,15 @@
             cost: "$$",
             blue: false
         }, {
+            name: "Family Room Cafe",
+            address: "Calle Vergós 55 (plaza), 08017 Barcelona",
+            lat: 41.396830,
+            lng: 2.126869,
+            summary: "Great play area. Small but tasty menu.",
+            emojis: "🎲☕🍷🥐🍽️💩💩",
+            cost: "$$",
+            blue: false
+        }, {
             name: "+ Calida:d Fleca i degustació",
             address: "Carrer del Rosselló, 360, 08025 Barcelona",
             lat: 41.403563,
@@ -119,13 +128,13 @@
             summary: "Nice food. Chilled out.  Lunch/dinner.",
             emojis: "💺🍷🍽️",
             cost: "$$",
-            blue: true
+            blue: false
         }, {
             name: "Doble Zer00 Restaurant",
             address: "Carrer de Jaume Giralt, 53, 08003 Barcelona",
             lat: 41.387935,
             lng: 2.178699,
-            summary: "Good sushi. Excellen child-care. Lunch/dinner.",
+            summary: "Good sushi. Excellent child-care. Lunch/dinner.",
             emojis: "💺💺🎲🎲🍷🍷🍽️🍽️☕",
             cost: "$$$",
             blue: false
@@ -135,7 +144,49 @@
             lat: 41.385143,
             lng: 2.181925,
             blue: true
-        }, ]
+        }, {
+            name: "Bitacora tapas",
+            address: "Plaça de la Unió, 24, 08005 Barcelona",
+            lat: 41.400914,
+            lng: 2.204891,
+            summary: "Good food. Lots of space.",
+            emojis: "💺🍷🍷🍽️☕💩",
+            cost: "$$",
+            blue: false
+        }, {
+            name: "Al Waha Restaurant",
+            address: "Carrer de Verdi, 16, 08012 Barcelona",
+            lat: 41.403489,
+            lng: 2.157335,  
+            blue: true
+        }, {
+            name: "BANNA, Restaurant Thai",
+            address: "Plaça Revolució de Setembre 1868, 15, 08012 Barcelona",
+            lat: 41.402534,
+            lng: 2.158083,
+            summary: "Reasonable Thai food. Walled playpark outside.",
+            emojis: "🎲🍷🍽️☕",
+            cost: "$$",
+            blue: false
+        }, {
+            name: "Mama's Cafe",
+            address: "Carrer de Torrijos, 26, 08012 Barcelona",
+            lat: 41.403251,
+            lng: 2.159088,
+            summary: "Good for brunch. Nice outdoors area.",
+            emojis: "🎲🍷🍽️☕",
+            cost: "$$",
+            blue: false
+        }, {
+            name: "Cachitos Café",
+            address: "Carrer de Roger de Flor, 204, 08013 Barcelona",
+            lat: 41.399137,
+            lng: 2.172376,
+            summary: "Good for brunch. Lovely lady running it. Really amazing place.",
+            emojis: "☕🥐🥐🍽️",
+            cost: "$$",
+            blue: false
+        } ]
 
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -175,7 +226,7 @@
             var infowindowTemplate = _.template(`
                 <div class="location-info-box">
                     <h1 class="location-info-box__heading"><%= name %></h1>
-                    <% if (blue) { %><p>Not much is known about this place...</p> <% } %>
+                    <% if (blue) { %><p>Not much is known about this place, but it came recommended.</p> <% } %>
                     <% if (!blue) { %>
                         <p><strong><%= cost %></strong> - <%= emojis %></p>
                         <p><%= summary %></p>
