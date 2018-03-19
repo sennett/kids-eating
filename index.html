@@ -5,6 +5,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
     <style>
         html,
         body {
@@ -13,9 +15,23 @@
             padding: 0;
         }
 
-        #map {
+        .layout {
             height: 100%;
             width: 100%;
+        }
+
+        .layout__top {
+            height: 10%;
+            width: 100%;
+        }
+
+        .layout__map {
+            height: 90%;
+            width: 100%;
+        }
+
+        .top-bar {
+            
         }
 
         .location-info-box {
@@ -29,6 +45,11 @@
 </head>
 
 <body>
+    <div class="layout">
+        <div class="layout__top top-bar">
+        </div>
+        <div id="map" class="layout__map"></div>
+    </div>
     <div id="map"></div>
     <script>
         var DEFAULT_ZOOM = 12
@@ -51,7 +72,8 @@
             lng: 2.172328,
             summary: "Great play area. Rather touristy. Average food for the price.",
             emojis: "💺🎲🍷🍷🍽️",
-            cost: "$$$"
+            cost: "$$$",
+            blue: false
             // highchairs, alcholo, playarea, food, cafe/restaurant, space, changing mat 💺🎲☕🥐🍷🍽️💩
         }, {
             name: "The Pudding Bar",
@@ -60,7 +82,8 @@
             lng: 2.170693,
             summary: "Great play area. Good for brunch. Big toadstools.",
             emojis: "🎲☕🍷🥐🍽️",
-            cost: "$$"
+            cost: "$$",
+            blue: false
         }, {
             name: "Pudding Coffee Shop",
             address: "Avinguda Diagonal, 515, 08029 Barcelona",
@@ -68,7 +91,8 @@
             lng: 2.140709,
             summary: "Great play area. Good for brunch. Harry Potter themed.",
             emojis: "🎲☕🍷🥐🍽️",
-            cost: "$$"
+            cost: "$$",
+            blue: false
         }, {
             name: "Family Room Cafe",
             address: "Carrer de Joan Gamper, 13, 08014 Barcelona",
@@ -76,7 +100,8 @@
             lng: 2.133945,
             summary: "Great play area. Small but tasty menu.",
             emojis: "🎲☕🍷🥐🍽️💩💩",
-            cost: "$$"
+            cost: "$$",
+            blue: false
         }, {
             name: "+ Calida:d Fleca i degustació",
             address: "Carrer del Rosselló, 360, 08025 Barcelona",
@@ -84,7 +109,8 @@
             lng: 2.171249,
             summary: "Great play area. Good tea selection. Pastry-style snacks only.",
             emojis: "🎲☕🥐",
-            cost: "$$"
+            cost: "$$",
+            blue: false
         }, {
             name: "El Señorio del Perú",
             address: "Carrer de Còrsega, 607, 08025 Barcelona",
@@ -92,7 +118,8 @@
             lng: 2.175085,
             summary: "Nice food. Chilled out.  Lunch/dinner.",
             emojis: "💺🍷🍽️",
-            cost: "$$"
+            cost: "$$",
+            blue: true
         }, {
             name: "Doble Zer00 Restaurant",
             address: "Carrer de Jaume Giralt, 53, 08003 Barcelona",
@@ -100,8 +127,15 @@
             lng: 2.178699,
             summary: "Good sushi. Excellen child-care. Lunch/dinner.",
             emojis: "💺💺🎲🎲🍷🍷🍽️🍽️☕",
-            cost: "$$$"
-        }]
+            cost: "$$$",
+            blue: false
+        }, {
+            name: "Restaurante Bar Cel Ona",
+            address: "Carrer de la Cirera, 4, 08003 Barcelona, Spain",
+            lat: 41.385143,
+            lng: 2.181925,
+            blue: true
+        }, ]
 
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -138,22 +172,32 @@
 
             var infowindow = new google.maps.InfoWindow()
             
+            var infowindowTemplate = _.template(`
+                <div class="location-info-box">
+                    <h1 class="location-info-box__heading"><%= name %></h1>
+                    <% if (blue) { %><p>Not much is known about this place...</p> <% } %>
+                    <% if (!blue) { %>
+                        <p><strong><%= cost %></strong> - <%= emojis %></p>
+                        <p><%= summary %></p>
+                    <% } %>
+                    <p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=<%= mapsQueryParam %>">Open in Google Maps</a></p>
+                </div>`)
+
             restaurants.forEach(function (restaurant) {
                 var marker = new google.maps.Marker({
                     position: restaurant,
                     map: map
                 })
 
+                if (restaurant.blue) {
+                    marker.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png")
+                }
+
                 marker.addListener('click', function () {
                     infowindow.close()
-                    var mapsQueryParam = encodeURIComponent(restaurant.name + " " + restaurant.address)
-                    infowindow.setContent(`
-                        <div class="location-info-box">
-                            <h1 class="location-info-box__heading">${restaurant.name}</h1>
-                            <p><strong>${restaurant.cost}</strong> - ${restaurant.emojis}</p>
-                            <p>${restaurant.summary}</p>
-                            <p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${mapsQueryParam}">Open in Google Maps</a></p>
-                        <div>`)
+                    restaurant.mapsQueryParam = encodeURIComponent(restaurant.name + " " + restaurant.address)
+
+                    infowindow.setContent(infowindowTemplate(restaurant))
                     infowindow.open(map, marker)
                 })
             })
