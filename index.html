@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="/css/layout.css">
     <script src="/js/data.js"></script>
+    <script src="/js/initMap.js"></script>
 </head>
 
 <body>
@@ -31,88 +32,7 @@
             <p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=<%= mapsQueryParam %>">Open in Google Maps</a></p>
         </div>
     </script>
-    
-    <script>
-        var DEFAULT_ZOOM = 12
-        var DEFAULT_CENTRE = {
-            lat: 41.3937221351275,
-            lng: 2.158396155313767
-        }
 
-        var centre = localStorage.getItem('mapCentreLat') ? {
-            lat: Number(localStorage.getItem('mapCentreLat')),
-            lng: Number(localStorage.getItem('mapCentreLng'))
-        } : DEFAULT_CENTRE
-
-        var zoom = localStorage.getItem('mapZoom') ? Number(localStorage.getItem('mapZoom')) : DEFAULT_ZOOM
-
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: zoom,
-                center: centre,
-                styles: [
-                    {
-                        "featureType": "poi.business",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "elementType": "labels.icon",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    }
-                ]
-            });
-
-            var infowindow = new google.maps.InfoWindow()
-            
-            var infowindowTemplate = _.template(document.getElementById("infoWindowTemplate").innerHTML)
-
-            restaurants.forEach(function (restaurant) {
-                var marker = new google.maps.Marker({
-                    position: restaurant,
-                    map: map
-                })
-
-                if (restaurant.blue) {
-                    marker.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png")
-                }
-
-                marker.addListener('click', function () {
-                    infowindow.close()
-                    restaurant.mapsQueryParam = encodeURIComponent(restaurant.name + " " + restaurant.address)
-
-                    infowindow.setContent(infowindowTemplate(restaurant))
-                    infowindow.open(map, marker)
-                })
-            })
-
-            map.addListener('center_changed', function () {
-                var latLng = map.getCenter()
-                localStorage.setItem('mapCentreLat', latLng.lat())
-                localStorage.setItem('mapCentreLng', latLng.lng())
-            })
-
-            map.addListener('zoom_changed', function () {
-                localStorage.setItem('mapZoom', map.getZoom())
-            })
-        }
-    </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR9P_UyRtqQdYBlx6IZkju8jSgO8iWzk4&callback=initMap">
     </script>
 </body>
