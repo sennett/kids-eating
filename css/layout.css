@@ -1,32 +1,30 @@
-html,body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
-        .layout {
-            height: 100%;
-            width: 100%;
-        }
+.layout {
+    height: 100%;
+    width: 100%;
+}
 
-        .layout__top {
-            height: 0%;
-            width: 100%;
-        }
+.layout__top {
+    height: 0%;
+    width: 100%;
+}
 
-        .layout__map {
-            height: 100%;
-            width: 100%;
-        }
+.layout__map {
+    height: 100%;
+    width: 100%;
+}
 
-        .top-bar {
-            
-        }
+.top-bar {}
 
-        .location-info-box {
-            max-width: 65vw;
-        }
+.location-info-box {
+    max-width: 65vw;
+}
 
-        .location-info-box__heading {
-            font-size: 1em;
-        }
+.location-info-box__heading {
+    font-size: 1em;
+}
