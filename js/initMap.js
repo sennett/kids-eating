@@ -1,49 +1,44 @@
-var DEFAULT_ZOOM = 12
-var DEFAULT_CENTRE = {
-    lat: 41.3937221351275,
-    lng: 2.158396155313767
-}
-
-var MAP_STYLES = [
-    {
-        "featureType": "poi.business",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    }
-]
-
-var centre = localStorage.getItem('mapCentreLat') ? {
-    lat: Number(localStorage.getItem('mapCentreLat')),
-    lng: Number(localStorage.getItem('mapCentreLng'))
-} : DEFAULT_CENTRE
-
-var zoom = localStorage.getItem('mapZoom') ? Number(localStorage.getItem('mapZoom')) : DEFAULT_ZOOM
-
 function initMap() {
+
+    var DEFAULT_ZOOM = 12
+    var DEFAULT_CENTRE = {
+        lat: 41.3937221351275,
+        lng: 2.158396155313767
+    }
+
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: zoom,
-        center: centre,
-        styles: MAP_STYLES
+        zoom: localStorage.getItem('mapZoom') ? Number(localStorage.getItem('mapZoom')) : DEFAULT_ZOOM,
+        center: localStorage.getItem('mapCentreLat') ? {
+                lat: Number(localStorage.getItem('mapCentreLat')),
+                lng: Number(localStorage.getItem('mapCentreLng'))
+            } : DEFAULT_CENTRE,
+        styles: [
+            {
+                "featureType": "poi.business",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            }
+        ]
     });
 
     map.addListener('center_changed', function () {
