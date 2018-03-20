@@ -25,6 +25,10 @@ html, body {
     align-items: center;
 }
 
+.top-bar__help {
+    font-size: 3.5vh;
+}
+
 .location-info-box {
     max-width: 65vw;
 }
