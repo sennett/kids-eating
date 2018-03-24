@@ -7,7 +7,6 @@ var restaurants = [{
     emojis: "💺🎲🍷🍷🍽️",
     cost: "$$$",
     blue: false
-    // highchairs, alcholo, playarea, food, cafe/restaurant, space, changing mat 💺🎲☕🥐🍷🍽️💩
 }, {
     name: "The Pudding Bar",
     address: "Carrer de Pau Claris, 90, 08010 Barcelona",
@@ -90,7 +89,7 @@ var restaurants = [{
     name: "Al Waha Restaurant",
     address: "Carrer de Verdi, 16, 08012 Barcelona",
     lat: 41.403489,
-    lng: 2.157335,  
+    lng: 2.157335,
     blue: true
 }, {
     name: "BANNA, Restaurant Thai",
@@ -115,7 +114,7 @@ var restaurants = [{
     address: "Carrer de Roger de Flor, 204, 08013 Barcelona",
     lat: 41.399137,
     lng: 2.172376,
-    summary: "Good for brunch. Lovely lady running it. Really amazing place.",
+    summary: "Good for brunch. Lovely lady running it. Jolly.",
     emojis: "☕🥐🥐🍽️",
     cost: "$$",
     blue: false
@@ -152,4 +151,34 @@ var restaurants = [{
     lat: 41.384469,
     lng: 2.168990,
     blue: true
-} ]
+}, {
+    name: "Yatai barcelona restaurant",
+    address: "Carrer Comte d'Urgell, 112, 08011 Barcelona",
+    lat: 41.384393,
+    lng: 2.156114,
+    summary: "Japonese. Fantastic food and staff. Kids will eat edamame for days. Probably you should reserve.",
+    emojis: "💺🎲☕🍷🍽️️️️️️️️️️🍽️️️️️️️️️️💩",
+    cost: "$$",
+    blue: false
+}, {
+    name: "Petit Bangkok",
+    address: "106, Carrer de Balmes, 08008 Barcelona",
+    lat: 41.392327,
+    lng: 2.158821,
+    summary: "Good Thai food.  Lovely staff.",
+    emojis: "💺🍷🍽️️️️️️️️️️🍽️️️️️️️️️️",
+    cost: "$$",
+    blue: false
+}, {
+    name: "Artespañol, Paellas & Tapas",
+    address: "Carrer de Provença, 271, 08008 Barcelona",
+    lat: 41.395584,
+    lng: 2.162293,
+    summary: "Touristy, uptight, expensive.  Only included because of the changing station.",
+    emojis: "☕🍷🍽️💩💩",
+    cost: "$$$$",
+    blue: false
+}]
+
+
+// highchairs, alcholo, playarea, food, cafe/restaurant, space, changing mat    💺🎲☕🥐🍷🍽️💩      -
