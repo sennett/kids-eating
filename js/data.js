@@ -178,6 +178,18 @@ var restaurants = [{
     emojis: "☕🍷🍽️💩💩",
     cost: "$$$$",
     blue: false
+}, {
+    name: "Souvenir Restaurant Rus",
+    address: "Carrer de València, 232, 08007 Barcelona",
+    lat: 41.390141,
+    lng: 2.160223,
+    blue: true
+}, {
+    name: "Suarna",
+    address: "Carrer de Llança, 1, 08015 Barcelona",
+    lat: 41.375404,
+    lng: 2.151484,
+    blue: true
 }]
 
 
