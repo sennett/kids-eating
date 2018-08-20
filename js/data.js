@@ -283,6 +283,21 @@ var restaurants = [{
     emojis: "💺🎲☕🥐🥐🍷",
     cost: "$$",
     blue: false
+}, {
+    name: "Café Casa Orlandai",
+    address: "Carrer de Jaume Piquet, 23, 08017 Barcelona, Spain",
+    lat: 41.398320,
+    lng: 2.124650,
+    blue: true
+}, {
+    name: "Bar El Convent",
+    address: "Carrer del Comerç, 36, 08003 Barcelona, Spain",
+    lat: 41.387390,
+    lng: 2.181720,
+    summary: "Large outside area.  Lots of space.  Running-around type place.",
+    emojis: "💺🎲☕🥐🥐🍷",
+    cost: "$$",
+    blue: false
 }]
 
 
