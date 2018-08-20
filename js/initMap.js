@@ -9,9 +9,9 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: localStorage.getItem('mapZoom') ? Number(localStorage.getItem('mapZoom')) : DEFAULT_ZOOM,
         center: localStorage.getItem('mapCentreLat') ? {
-                lat: Number(localStorage.getItem('mapCentreLat')),
-                lng: Number(localStorage.getItem('mapCentreLng'))
-            } : DEFAULT_CENTRE,
+            lat: Number(localStorage.getItem('mapCentreLat')),
+            lng: Number(localStorage.getItem('mapCentreLng'))
+        } : DEFAULT_CENTRE,
         styles: [
             {
                 "featureType": "poi.business",
