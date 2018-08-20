@@ -5,6 +5,8 @@
     top: 0;
     left: 0;
     background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .help-screen--closed {
@@ -16,8 +18,16 @@
 }
 
 .help-screen__close {
-    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
     font-size: 50px;
-    line-height: 37px;
+    line-height: 27px;
     cursor: pointer;
+}
+
+.help-screen__tantrum {
+    float:left;
+    height: 200px;
+    margin: 0 1em 1em 0;
 }
