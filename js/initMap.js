@@ -12,6 +12,7 @@ function initMap() {
             lat: Number(localStorage.getItem('mapCentreLat')),
             lng: Number(localStorage.getItem('mapCentreLng'))
         } : DEFAULT_CENTRE,
+        disableDefaultUI: true, // a way to quickly hide all controls
         styles: [
             {
                 "featureType": "poi.business",
