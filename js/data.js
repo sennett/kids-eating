@@ -190,6 +190,60 @@ var restaurants = [{
     lat: 41.375404,
     lng: 2.151484,
     blue: true
+}, {
+    name: "Restaurant 5° Pino",
+    address: "Passeig de la Bonanova, 98, 08017 Barcelona, Spain",
+    lat: 41.401000,
+    lng: 2.123150,
+    summary: "Catalan food. Decent terrace next to municipal play area.  AC.  Might be a short wait to sit outside.",
+    emojis: "🎲☕🍷🍽️️️️️️️️️️💩",
+    cost: "$$$",
+    blue: false
+}, {
+    name: "La Torrada de Cristofol",
+    address: "Plaça de Marià Brossa, 14, 08030 Barcelona, Spain",
+    lat: 41.437330,
+    lng: 2.188230,
+    summary: "Catalan food. A few outside tables next to municipal play area. Might be a short wait to sit outside.",
+    emojis: "🎲☕🍷🍽️️️️️️️️️️💩",
+    cost: "$$",
+    blue: false
+}, {
+    name: "La Illa del Café",
+    address: "Carrer del Taquígraf Garriga, 63 - 67, 08029 Barcelona, Spain",
+    lat: 41.3879100,
+    lng: 2.135390,
+    summary: "Quick bite/drink. Terrace next to municipal play area.",
+    emojis: "🎲☕🍷🍽️️️️️️️️️️💩",
+    cost: "$$",
+    blue: false
+}, {
+    name: "Amaloca",
+    address: "Carrer de la Virtut, 11, 08012 Barcelona, Spain",
+    lat: 41.402310,
+    lng: 2.156230,
+    summary: "Good Asian-fusion. Playarea with person looking after the kids!  Truly hands-off.",
+    emojis: "🎲🎲☕🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️🍽️️️️️️️️️️️️️️️",
+    cost: "$$",
+    blue: false
+}, {
+    name: "La Ikas",
+    address: "Carrer de la Perla, 22, 08012 Barcelona, Spain",
+    lat: 41.403710,
+    lng: 2.157670,
+    summary: "Lots of space, kids toys and books, and a piano.",
+    emojis: "🎲☕🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️",
+    cost: "$$",
+    blue: false
+}, {
+    name: "Petit A Petit Cafe",
+    address: "Calle Sant Joanistes, 24, 08006 Barcelona, Spain",
+    lat: 41.403540,
+    lng: 2.144910,
+    summary: "Breakfast. Little play area.",
+    emojis: "🎲☕🥐🥐🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️",
+    cost: "$$",
+    blue: false
 }]
 
 
