@@ -14,3 +14,10 @@
 .help-screen--open {
     display: block;
 }
+
+.help-screen__close {
+    float: right;
+    font-size: 50px;
+    line-height: 37px;
+    cursor: pointer;
+}
