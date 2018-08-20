@@ -35,3 +35,7 @@
 .help-screen__booze {
     width: 100%;
 }
+
+.help-screen__key dt {
+    font-size: 1.5em;
+}
