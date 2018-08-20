@@ -10,7 +10,7 @@ function initMarkers (map, restaurants) {
         })
 
         if (restaurant.blue) {
-            marker.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png")
+            marker.setIcon("https://maps.google.com/mapfiles/ms/icons/blue-dot.png")
         }
 
         marker.addListener('click', function () {
