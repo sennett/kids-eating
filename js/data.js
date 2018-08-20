@@ -134,11 +134,14 @@ var restaurants = [{
     lng: 2.181603,
     blue: true
 }, {
-    name: "Chocolatería La Nena",
+    name: "La Nena",
     address: "Carrer de Ramón y Cajal, 36, 08012 Barcelona",
     lat: 41.402552,
     lng: 2.158858,
-    blue: true
+    summary: "Somewhat random selection of food.  Slightly hectic and not much space.",
+    emojis: "🎲☕🥐",
+    cost: "$$",
+    blue: false
 }, {
     name: "Bobo Pulpín",
     address: "Carrer de la Freneria, 5, 08002 Barcelona",
@@ -242,6 +245,42 @@ var restaurants = [{
     lng: 2.144910,
     summary: "Breakfast. Little play area.",
     emojis: "🎲☕🥐🥐🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️",
+    cost: "$$",
+    blue: false
+}, {
+    name: "El Pati Verd Sants",
+    address: "Carrer d'Olzinelles 100, 08014 Barcelona, Spain",
+    lat: 41.370810,
+    lng: 2.137380,
+    summary: "Lots of toys. Safe outside play area.",
+    emojis: "🎲☕🥐🥐🍷",
+    cost: "$$",
+    blue: false
+}, {
+    name: "Mama's Corner",
+    address: "Passatge de Lluís Pellicer, 10, 08036 Barcelona, Spain",
+    lat: 41.393030,
+    lng: 2.149460,
+    summary: "Amazing play area with lots of toys.  Hands-off.  Oragnised activities at certain times.",
+    emojis: "🎲🎲☕🥐🥐",
+    cost: "$$",
+    blue: false
+}, {
+    name: "Ideal",
+    address: "C/ Marià Aguiló, 99, 08005 Barcelona, Spain",
+    lat: 41.400940,
+    lng: 2.203740,
+    summary: "Smallish play area.  Relaxed.  Takes a while to get served.",
+    emojis: "💺🎲☕🥐🍷",
+    cost: "$$",
+    blue: false
+}, {
+    name: "L'Atelier by amis",
+    address: "Carrer del Joncar, 29, 08005 Barcelona, Spain",
+    lat: 41.401110,
+    lng: 2.204220,
+    summary: "Two play areas.  Relaxed.  Great cakes.",
+    emojis: "💺🎲☕🥐🥐🍷",
     cost: "$$",
     blue: false
 }]
