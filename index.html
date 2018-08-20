@@ -9,22 +9,29 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/help-screen.css">
     <script src="js/data.js"></script>
     <script src="js/initMap.js"></script>
     <script src="js/markers.js"></script>
+    <script src="js/help-screen.js"></script>
     <script src="js/app.js"></script>
 </head>
 
 <body>
     <div class="layout">
         <div class="layout__top top-bar">
-            <button class="top-bar__help" disabled="disabled">
-                (this button does nothing yet)
+            <button class="top-bar__help" id="openHelpScreen">
+                What's going on
             </button>
         </div>
+        
         <div id="map" class="layout__map"></div>
     </div>
-    <div id="map"></div>
+    <div class="help-screen help-screen--closed" id="helpScreen">
+        <div class="help-screen__close">
+        </div>
+        some content
+    </div>
 
     <script type="text/html" id="infoWindowTemplate">
         <div class="location-info-box">
