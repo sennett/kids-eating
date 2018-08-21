@@ -27,7 +27,7 @@ html, body {
     align-items: center;
 }
 
-.top-bar__help {
+.top-bar__help, .top-bar__location {
     font-size: 3.5vh;
 }
 
