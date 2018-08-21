@@ -19,6 +19,7 @@
     <script src="js/location.js"></script>
     <script src="js/app.js"></script>
     <script src="js/venueFeedback.js"></script>
+    <script src="js/venueSubmission.js"></script>
 </head>
 
 <body>
@@ -31,6 +32,9 @@
                 <input type="checkbox" id="updateLocation" disabled />
                 <label for="updateLocation">Show location</label>
             </div>
+            <button class="top-bar__submit" onclick="openVenueSubmit(); return false;">
+                Submit
+            </button>
         </div>
         
         <div id="map" class="layout__map"></div>
@@ -40,13 +44,9 @@
             ✕
         </div>
         <h1>About</h1>
-        <p>
-            Kids are welcome anywhere in Barcelona. Almost everywhere people will bend over backwards to accomodate the little bastards.
-            It's lovely and nice and eveyone smiles, but it's not what we're doing here.
-        </p>
         <img src="img/tantrum.png" class="help-screen__tantrum" alt="picture of a kid causing a damned fuss" />
         <p>
-            You know the drill. You're walking around town trying to "enjoy a day out with the family", and Little Johnny starts throwing
+            You're walking around town trying to "enjoy a day out with the family", and Little Johnny starts throwing
             a hissy-fit about some bullshit. You couldn't stay in the house, and now it seems that out of the house isn't good
             enough either. What's a parent to do when all they want is a stiff drink and a moment to forget?
         </p>
