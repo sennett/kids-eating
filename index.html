@@ -24,9 +24,10 @@
             <button class="top-bar__help" id="openHelpScreen">
                 About
             </button>
-            <button class="top-bar__location" id="updateLocation" disabled="disabled">
-                Update location
-            </button>
+            <div class="top-bar__location">
+                <input type="checkbox" id="updateLocation" disabled />
+                <label for="updateLocation">Show location</label>
+            </div>
         </div>
         
         <div id="map" class="layout__map"></div>

@@ -1,14 +1,16 @@
 function initLocation(map) {
-    const locationButton = document.getElementById("updateLocation")
-    locationButton.onclick = handleLocationClick
+    var locationTrackingId
+    const locationCheckbox = document.getElementById("updateLocation")
+    locationCheckbox.onclick = handleLocationClick
     if (navigator.geolocation) {
-        locationButton.disabled = false
+        locationCheckbox.disabled = false
     }
 
-    // latlng are required, but don't care where this is initially -
-    // not displayed until user manually updates their location.
     const locationMarker = new google.maps.Marker({
+        // latlng are required, but don't care where this is initially -
+        // not displayed until user manually updates their location.
         position: { lat: 0, lng: 0 },
+        visible: false,
         icon: { // similar to google dot
             path: google.maps.SymbolPath.CIRCLE,
             fillColor: '#4285f4',
@@ -21,31 +23,34 @@ function initLocation(map) {
         }
     })
 
-    function handleLocationClick() {
+    function handleLocationClick(event) {
         if (navigator.geolocation) {
-            disableLocationUI()
-            navigator.geolocation.getCurrentPosition(positionUpdateSuccess, positionUpdateError, { enableHighAccuracy: true })
+            if (event.target.checked) {
+                startLocationTracking()
+            } else {
+                stopLocationTracking()
+            }
         } else {
             alert("Geolocation is not supported by this browser.")
         }
     }
 
+    function startLocationTracking() {
+        locationTrackingId = navigator.geolocation.watchPosition(
+            onNewPosition, positionUpdateError, { enableHighAccuracy: true })
+    }
+
+    function stopLocationTracking() {
+        navigator.geolocation.clearWatch(locationTrackingId)
+        locationMarker.setVisible(false)
+    }
+
     function positionUpdateError() {
         alert("could not find location")
-        reenableLocationUI()
     }
 
-    function disableLocationUI() {
-        locationButton.disabled = true
-    }
-
-    function reenableLocationUI() {
-        locationButton.disabled = false
-    }
-
-    function positionUpdateSuccess(position) {
+    function onNewPosition(position) {
         updateMap(position)
-        reenableLocationUI()
     }
 
     function updateMap(position) {
@@ -59,6 +64,7 @@ function initLocation(map) {
             fontWeight: 'bold',
             fontSize: '10px'
         })
+        locationMarker.setVisible(true)
         window.anthony = locationMarker
     }
 }
