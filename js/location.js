@@ -17,14 +17,14 @@ function initLocation(map) {
             strokeOpacity: 1,
             strokeWeight: 2,
             scale: 6,
-            labelOrigin: new google.maps.Point(8, 0)
+            labelOrigin: new google.maps.Point(0, 3)
         }
     })
 
     function handleLocationClick() {
         if (navigator.geolocation) {
             disableLocationUI()
-            navigator.geolocation.getCurrentPosition(positionUpdateSuccess, positionUpdateError, { enableHighAccuracy: false })
+            navigator.geolocation.getCurrentPosition(positionUpdateSuccess, positionUpdateError, { enableHighAccuracy: true })
         } else {
             alert("Geolocation is not supported by this browser.")
         }
