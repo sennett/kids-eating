@@ -1,0 +1,8 @@
+.captioned-image__image {
+    width: 100%;
+}
+
+.captioned-image__caption {
+    font-size: 0.7em;
+    line-height: 1.2em;
+}

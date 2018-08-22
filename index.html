@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/help-screen.css">
+    <link rel="stylesheet" type="text/css" href="css/defaults.css">
+    <link rel="stylesheet" type="text/css" href="css/location-info-box.css">
+    <link rel="stylesheet" type="text/css" href="css/captioned-image.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
     <script src="https://embed.typeform.com/embed.js" type="text/javascript"></script>
@@ -44,7 +47,10 @@
             ✕
         </div>
         <h1>About</h1>
-        <img src="img/tantrum.png" class="help-screen__tantrum" alt="picture of a kid causing a damned fuss" />
+        <figure class="help-screen__tantrum captioned-image">
+            <img src="img/tantrum.png" alt="picture of a kid causing a damned fuss" class="captioned-image__image" />
+            <figcaption class="captioned-image__caption">Yay.</figcaption>
+        </figure>
         <p>
             You're walking around town trying to "enjoy a day out with the family", and Little Johnny starts throwing
             a hissy-fit about some bullshit. You couldn't stay in the house, and now it seems that out of the house isn't good
@@ -67,7 +73,11 @@
             In short, anywhere you can easily get a drink whilst not holding a child will feature. In this list, kids fit around adults,
             but they also leave you the hell alone.
         </p>
-        <img src="img/yes.jpg" class="help-screen__booze" alt="alcohol + kids =? win" />
+        <figure class="help-screen__booze captioned-image">
+            <img src="img/yes.jpg" class="captioned-image__image" alt="alcohol + kids =? win" />
+            <figcaption class="captioned-image__caption">😉👍</figcaption>
+        </figure>
+        
         <h1>Key</h1>
         <p>Here are what the emojis mean:</p>
         <dl class="help-screen__key">
