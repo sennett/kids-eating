@@ -1,6 +1,8 @@
 .top-bar {
     text-align: center;
+    position: relative;
 }
+
 .top-bar__help, .top-bar__submit, .top-bar__location {
     font-size: 3.5vh;
 }
@@ -14,9 +16,13 @@
 
 .top-bar__submit {
     width: 50vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .top-bar__location {
     height: 100%;
-    float:right;
+    float: right;
 }
