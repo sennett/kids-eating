@@ -3,7 +3,7 @@
     position: relative;
 }
 
-.top-bar__help, .top-bar__submit, .top-bar__location {
+.top-bar__help, .top-bar__feedback, .top-bar__location {
     font-size: 3.5vh;
 }
 
@@ -14,7 +14,7 @@
     font-size: 7vh;
 }
 
-.top-bar__submit {
+.top-bar__feedback {
     width: 50vw;
     position: absolute;
     top: 50%;
