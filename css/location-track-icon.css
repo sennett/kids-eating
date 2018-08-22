@@ -1,17 +1,17 @@
-.location-track-icon--disabled path {
+.location-track-icon--tracking-disabled path {
     fill: #e2a7e5 !important;
 }
 
-.location-track-icon--enabled path,
+.location-track-icon--tracking-enabled path,
 .location-track-icon__loader path {
     fill: #c37cc6 !important;
 }
 
-.location-track-icon--disabled .location-track-icon__loader,
-.location-track-icon--enabled .location-track-icon__loader {
+.location-track-icon--tracking-disabled .location-track-icon__loader,
+.location-track-icon--tracking-enabled .location-track-icon__loader {
     display: none;
 }
 
-.location-track-icon--loading .location-track-icon__toggler {
+.location-track-icon--tracking-loading .location-track-icon__toggler {
     display: none;
 }

@@ -35,17 +35,17 @@ function initLocation(map) {
     function startLocationTracking() {
         locationTrackingId = navigator.geolocation.watchPosition(
             onNewPosition, positionUpdateError, { enableHighAccuracy: true })
-        removeClass(locationToggler, "location-track-icon--disabled")
-        addClass(locationToggler, "location-track-icon--loading")
+        removeClass(locationToggler, "location-track-icon--tracking-disabled")
+        addClass(locationToggler, "location-track-icon--tracking-loading")
     }
 
     function stopLocationTracking() {
         navigator.geolocation.clearWatch(locationTrackingId)
         locationMarker.setVisible(false)
         locationTrackingId = null
-        removeClass(locationToggler, "location-track-icon--loading")
-        removeClass(locationToggler, "location-track-icon--enabled")
-        addClass(locationToggler, "location-track-icon--disabled")
+        removeClass(locationToggler, "location-track-icon--tracking-loading")
+        removeClass(locationToggler, "location-track-icon--tracking-enabled")
+        addClass(locationToggler, "location-track-icon--tracking-disabled")
     }
 
     function positionUpdateError(positionError) {
@@ -53,8 +53,8 @@ function initLocation(map) {
     }
 
     function onNewPosition(position) {
-        removeClass(locationToggler, "location-track-icon--loading")
-        addClass(locationToggler, "location-track-icon--enabled")
+        removeClass(locationToggler, "location-track-icon--tracking-loading")
+        addClass(locationToggler, "location-track-icon--tracking-enabled")
         updateMap(position)
     }
 
