@@ -11,6 +11,8 @@ function initMarkers (map, restaurants) {
 
         if (restaurant.blue) {
             marker.setIcon("https://maps.google.com/mapfiles/ms/icons/blue-dot.png")
+        } else {
+            marker.setIcon("https://maps.google.com/mapfiles/ms/icons/pink-dot.png")
         }
 
         marker.addListener('click', function () {
