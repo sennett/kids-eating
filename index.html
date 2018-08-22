@@ -79,7 +79,7 @@
         </figure>
         
         <h1>Key</h1>
-        <p>Here are what the emojis mean:</p>
+        <p>This is what the emojis mean:</p>
         <dl class="help-screen__key">
             <dt>💺</dt>
             <dd><em>Highchairs.</em> The more 💺, the more highchairs are generally available.</dd>
@@ -96,11 +96,12 @@
             <dt>💩</dt>
             <dd>Ease of <em>changing</em>.  💩 = bench or wall or similar outside, close by.  💩💩 = dedicated changing station.</dd>
         </dl>
+        <p>The more an emoji is repeated, the more the place gets that thing right.</p>
     </div>
 
     <script type="text/html" id="infoWindowTemplate">
         <div class="location-info-box">
-            <h1 class="location-info-box__heading"><%= name %></h1>
+            <strong class="location-info-box__heading"><%= name %></strong>
             <% if (blue) { %><p>Not much is known about this place, but it came recommended.</p> <% } %>
             <% if (!blue) { %>
                 <p><strong><%= cost %></strong> - <%= emojis %></p>
