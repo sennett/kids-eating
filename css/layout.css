@@ -29,3 +29,6 @@ html, body {
     font-size: 3.5vh;
 }
 
+.locationIcon {
+    fill: blue !important;
+}
