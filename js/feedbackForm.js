@@ -1,4 +1,4 @@
-function openFeedbackForm (source) {
-    const tfUrl = `https://sennett.typeform.com/to/v0LtSr?source=${source}`
+function openFeedbackForm (clickSource) {
+    const tfUrl = `https://sennett.typeform.com/to/v0LtSr?source=${clickSource}`
     popupTypeform(tfUrl)
 }
