@@ -9,6 +9,12 @@
     padding: 20px;
 }
 
+.help-screen h1 {
+    border-bottom: solid 1px #e2a7e5;
+    padding-bottom: 0.1em;
+    margin-top: 1em;
+}
+
 .help-screen--closed {
     display: none;
 }
@@ -19,8 +25,8 @@
 
 .help-screen__close {
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 1vh;
+    right: 1vh;
     font-size: 50px;
     line-height: 27px;
     cursor: pointer;
