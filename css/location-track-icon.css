@@ -2,12 +2,9 @@
     fill: #e2a7e5 !important;
 }
 
-.location-track-icon--enabled path {
+.location-track-icon--enabled path,
+.location-track-icon__loader path {
     fill: #c37cc6 !important;
-}
-
-.location-track-icon--loading svg {
-    stroke: #c37cc6 !important;
 }
 
 .location-track-icon--disabled .location-track-icon__loader,
