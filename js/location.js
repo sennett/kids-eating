@@ -1,10 +1,7 @@
 function initLocation(map) {
-    var locationTrackingId
-    const locationCheckbox = document.getElementById("updateLocation")
-    locationCheckbox.onclick = handleLocationClick
-    if (navigator.geolocation) {
-        locationCheckbox.disabled = false
-    }
+    var locationTrackingId = null
+    const locationToggler = document.getElementById("showLocation")
+    locationToggler.onclick = handleLocationClick
 
     const locationMarker = new google.maps.Marker({
         // latlng are required, but don't care where this is initially -
@@ -23,9 +20,9 @@ function initLocation(map) {
         }
     })
 
-    function handleLocationClick(event) {
+    function handleLocationClick() {
         if (navigator.geolocation) {
-            if (event.target.checked) {
+            if (locationTrackingId === null) {
                 startLocationTracking()
             } else {
                 stopLocationTracking()
@@ -38,18 +35,26 @@ function initLocation(map) {
     function startLocationTracking() {
         locationTrackingId = navigator.geolocation.watchPosition(
             onNewPosition, positionUpdateError, { enableHighAccuracy: true })
+        removeClass(locationToggler, "location-track-icon--disabled")
+        addClass(locationToggler, "location-track-icon--loading")
     }
 
     function stopLocationTracking() {
         navigator.geolocation.clearWatch(locationTrackingId)
         locationMarker.setVisible(false)
+        locationTrackingId = null
+        removeClass(locationToggler, "location-track-icon--loading")
+        removeClass(locationToggler, "location-track-icon--enabled")
+        addClass(locationToggler, "location-track-icon--disabled")
     }
 
-    function positionUpdateError() {
-        alert("could not find location")
+    function positionUpdateError(positionError) {
+        stopLocationTracking()
     }
 
     function onNewPosition(position) {
+        removeClass(locationToggler, "location-track-icon--loading")
+        addClass(locationToggler, "location-track-icon--enabled")
         updateMap(position)
     }
 

@@ -29,6 +29,6 @@ html, body {
     font-size: 3.5vh;
 }
 
-.locationIcon {
-    fill: blue !important;
+.top-bar__location {
+    height: 100%;
 }
