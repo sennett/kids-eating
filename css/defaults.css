@@ -14,14 +14,13 @@ body, button {
 }
 
 button {
-    background-color: #c37cc6;
+    background-color: #e2a7e5;
     border-radius: 5px;
     border:none;
     color: white;   
 }
 
 h1 {
-    /*color: #000;*/
     font-family: Georgia,"Times New Roman",serif;
     font-size: 25px;
 }

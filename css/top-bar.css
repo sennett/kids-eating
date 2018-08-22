@@ -1,13 +1,22 @@
 .top-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+}
+.top-bar__help, .top-bar__submit, .top-bar__location {
+    font-size: 3.5vh;
 }
 
-.top-bar__help, .top-bar__location, .top-bar__submit {
-    font-size: 3.5vh;
+.top-bar__help {
+    float: left;
+    height: 10vh;
+    width: 10vh;
+    font-size: 7vh;
+}
+
+.top-bar__submit {
+    width: 50vw;
 }
 
 .top-bar__location {
     height: 100%;
+    float:right;
 }

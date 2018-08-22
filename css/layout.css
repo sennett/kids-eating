@@ -17,4 +17,6 @@ html, body {
 .layout__map {
     height: 90%;
     width: 100%;
+    border-top: solid 0.5vh #fac9fc;
+    box-sizing: border-box;
 }
