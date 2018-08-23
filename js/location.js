@@ -65,7 +65,7 @@ function initLocation(map) {
         locationMarker.setPosition(currentLocation)
         locationMarker.setLabel({
             color: '#4285f4',
-            text: `within ${position.coords.accuracy.toString().split(".")[0]} meters`,
+            text: 'within ' + position.coords.accuracy.toString().split(".")[0] + ' meters',
             fontWeight: 'bold',
             fontSize: '10px'
         })
