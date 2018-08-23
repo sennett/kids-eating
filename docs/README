@@ -1,0 +1,3 @@
+As long as this is hosted on GH pages, this folder contains
+the servable production build.  It is written to using build.js.
+It is under SCM, because that's how GH pages works.

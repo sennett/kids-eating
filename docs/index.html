@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<!-- this code is amazing.... --> 
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+
+
+    <style>.captioned-image__image{width:100%}.captioned-image__caption{font-size:0.7em;line-height:1.2em}a{color:#c37cc6}figure{margin:0}body,button{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.4em;color:#666}button{background-color:#e2a7e5;border-radius:5px;border:none;color:white}h1{font-family:Georgia,"Times New Roman",serif;font-size:25px}.help-screen{height:100%;width:100%;position:absolute;top:0;left:0;background-color:white;box-sizing:border-box;padding:20px;overflow:scroll}.help-screen h1{border-bottom:solid 1px #e2a7e5;padding-bottom:0.1em;margin-top:1em}.help-screen--closed{display:none}.help-screen--open{display:block}.help-screen__close{position:fixed;top:1vh;right:1vh;font-size:50px;line-height:27px;cursor:pointer;color:#e2a7e5}.help-screen__tantrum{float:left;width:40%;margin:0 1em 0.9em 0;max-width:200px}.help-screen__booze{width:100%;max-width:200px;float:right}.help-screen__key dt{font-size:1.5em}html,body{height:100%;margin:0;padding:0}.layout{height:100%;width:100%}.layout__top{height:10%;width:100%}.layout__map{height:90%;width:100%;border-top:solid 0.5vh #fac9fc;box-sizing:border-box}.location-info-box{max-width:65vw}.location-info-box__heading{font-size:1em;margin-top:3px;display:block}.location-track-icon--tracking-disabled path{fill:#e2a7e5 !important}.location-track-icon--tracking-enabled path,.location-track-icon__loader path{fill:#c37cc6 !important}.location-track-icon--tracking-disabled .location-track-icon__loader,.location-track-icon--tracking-enabled .location-track-icon__loader{display:none}.location-track-icon--tracking-loading .location-track-icon__toggler{display:none}.top-bar{text-align:center;position:relative}.top-bar__help,.top-bar__feedback,.top-bar__location{font-size:3.5vh}.top-bar__help{float:left;height:10vh;width:10vh;font-size:7vh}.top-bar__feedback{width:50vw;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%)}.top-bar__location{height:100%;float:right}
+</style>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+    <script src="https://embed.typeform.com/embed.js" type="text/javascript"></script>
+    
+    <script>function removeClass(a,e){a.className=_(a.className).split(" ").without(e).join(" ")}function addClass(a,e){a.className=_(a.className).split(" ").concat(e).join(" ")}var restaurants=[{name:"Restaurant Singular",address:"Carrer de Sardenya, 321, 08025 Barcelona",lat:41.403922,lng:2.172328,summary:"Great play area. Rather touristy. Average food for the price.",emojis:"💺🎲🍷🍷🍽️",cost:"$$",blue:!1},{name:"The Pudding Bar",address:"Carrer de Pau Claris, 90, 08010 Barcelona",lat:41.390185,lng:2.170693,summary:"Great play area. Good for brunch. Big toadstools.",emojis:"🎲☕🍷🥐🍽️",cost:"$",blue:!1},{name:"Pudding Coffee Shop",address:"Avinguda Diagonal, 515, 08029 Barcelona",lat:41.391311,lng:2.140709,summary:"Great play area. Good for brunch. Harry Potter themed.",emojis:"🎲☕🍷🥐🍽️",cost:"$",blue:!1},{name:"Family Room Cafe",address:"Carrer de Joan Gamper, 13, 08014 Barcelona",lat:41.387115,lng:2.133945,summary:"Great play area. Small but tasty menu.",emojis:"🎲☕🍷🥐🍽️💩💩",cost:"$",blue:!1},{name:"Family Room Cafe",address:"Calle Vergós 55 (plaza), 08017 Barcelona",lat:41.39683,lng:2.126869,summary:"Great play area. Small but tasty menu.",emojis:"🎲☕🍷🥐🍽️💩💩",cost:"$",blue:!1},{name:"+ Calida:d Fleca i degustació",address:"Carrer del Rosselló, 360, 08025 Barcelona",lat:41.403563,lng:2.171249,summary:"Great play area. Good tea selection. Pastry-style snacks only.",emojis:"🎲☕🥐",cost:"$",blue:!1},{name:"El Señorio del Perú",address:"Carrer de Còrsega, 607, 08025 Barcelona",lat:41.408517,lng:2.175085,summary:"Nice food. Chilled out.  Lunch/dinner.",emojis:"💺🍷🍽️",cost:"$",blue:!1},{name:"Doble Zer00 Restaurant",address:"Carrer de Jaume Giralt, 53, 08003 Barcelona",lat:41.387935,lng:2.178699,summary:"Good sushi. Excellent child-care. Lunch/dinner.",emojis:"💺💺🎲🎲🍷🍷🍽️🍽️☕",cost:"$$",blue:!1},{name:"Restaurante Bar Cel Ona",address:"Carrer de la Cirera, 4, 08003 Barcelona, Spain",lat:41.385143,lng:2.181925,blue:!0},{name:"Bitacora tapas",address:"Plaça de la Unió, 24, 08005 Barcelona",lat:41.400914,lng:2.204891,summary:"Good food. Lots of space.",emojis:"💺🍷🍷🍽️☕💩",cost:"$",blue:!1},{name:"Al Waha Restaurant",address:"Carrer de Verdi, 16, 08012 Barcelona",lat:41.403489,lng:2.157335,blue:!0},{name:"BANNA, Restaurant Thai",address:"Plaça Revolució de Setembre 1868, 15, 08012 Barcelona",lat:41.402534,lng:2.158083,summary:"Reasonable Thai food. Walled playpark outside.",emojis:"🎲🍷🍽️☕",cost:"$",blue:!1},{name:"Mama's Cafe",address:"Carrer de Torrijos, 26, 08012 Barcelona",lat:41.403251,lng:2.159088,summary:"Good for brunch. Nice outdoors area.",emojis:"🎲🍷🍽️☕",cost:"$",blue:!1},{name:"Cachitos Café",address:"Carrer de Roger de Flor, 204, 08013 Barcelona",lat:41.399137,lng:2.172376,summary:"Good for brunch. Lovely lady running it. Jolly.",emojis:"☕🥐🥐🍽️",cost:"$",blue:!1},{name:"Café Lennon",address:"Carrer de Puigmartí, 35, 08012 Barcelona",lat:41.40284,lng:2.16111,summary:"Snacks. Outside. Next to a gated playpark.",emojis:"☕🎲🍷🥐️",cost:"$",blue:!1},{name:"Bar del Convent",address:"Carrer del Comerç, 36, 08003 Barcelona",lat:41.38782,lng:2.181603,blue:!0},{name:"La Nena",address:"Carrer de Ramón y Cajal, 36, 08012 Barcelona",lat:41.402552,lng:2.158858,summary:"Somewhat random selection of food.  Slightly hectic and not much space.",emojis:"🎲☕🥐",cost:"$",blue:!1},{name:"Bobo Pulpín",address:"Carrer de la Freneria, 5, 08002 Barcelona",lat:41.383703,lng:2.177346,blue:!0},{name:"Kasparo",address:"Plaça de Vicenç Martorell, 4, 08001 Barcelona",lat:41.384469,lng:2.16899,blue:!0},{name:"Yatai barcelona restaurant",address:"Carrer Comte d'Urgell, 112, 08011 Barcelona",lat:41.384393,lng:2.156114,summary:"Japonese. Fantastic food and staff. Kids will eat edamame for days. Probably you should reserve.",emojis:"💺🎲☕🍷🍽️️️️️️️️️️🍽️️️️️️️️️️💩",cost:"$",blue:!1},{name:"Petit Bangkok",address:"106, Carrer de Balmes, 08008 Barcelona",lat:41.392327,lng:2.158821,summary:"Good Thai food.  Lovely staff.",emojis:"💺🍷🍽️️️️️️️️️️🍽️️️️️️️️️️",cost:"$",blue:!1},{name:"Artespañol, Paellas & Tapas",address:"Carrer de Provença, 271, 08008 Barcelona",lat:41.395584,lng:2.162293,summary:"Touristy, uptight, expensive.  Only included because of the changing station.",emojis:"☕🍷🍽️💩💩",cost:"$$",blue:!1},{name:"Souvenir Restaurant Rus",address:"Carrer de València, 232, 08007 Barcelona",lat:41.390141,lng:2.160223,blue:!0},{name:"Suarna",address:"Carrer de Llança, 1, 08015 Barcelona",lat:41.375404,lng:2.151484,blue:!0},{name:"Restaurant 5° Pino",address:"Passeig de la Bonanova, 98, 08017 Barcelona, Spain",lat:41.401,lng:2.12315,summary:"Catalan food. Decent terrace next to municipal play area.  AC.  Might be a short wait to sit outside.",emojis:"🎲☕🍷🍽️️️️️️️️️️💩",cost:"$$",blue:!1},{name:"La Torrada de Cristofol",address:"Plaça de Marià Brossa, 14, 08030 Barcelona, Spain",lat:41.43733,lng:2.18823,summary:"Catalan food. A few outside tables next to municipal play area. Might be a short wait to sit outside.",emojis:"🎲☕🍷🍽️️️️️️️️️️💩",cost:"$",blue:!1},{name:"La Illa del Café",address:"Carrer del Taquígraf Garriga, 63 - 67, 08029 Barcelona, Spain",lat:41.38791,lng:2.13539,summary:"Quick bite/drink. Terrace next to municipal play area.",emojis:"🎲☕🍷🍽️️️️️️️️️️💩",cost:"$",blue:!1},{name:"Amaloca",address:"Carrer de la Virtut, 11, 08012 Barcelona, Spain",lat:41.40231,lng:2.15623,summary:"Good Asian-fusion. Playarea with person looking after the kids!  Truly hands-off.",emojis:"🎲🎲☕🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️🍽️️️️️️️️️️️️️️️",cost:"$",blue:!1},{name:"La Ikas",address:"Carrer de la Perla, 22, 08012 Barcelona, Spain",lat:41.40371,lng:2.15767,summary:"Lots of space, kids toys and books, and a piano.",emojis:"🎲☕🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️",cost:"$",blue:!1},{name:"Petit A Petit Cafe",address:"Calle Sant Joanistes, 24, 08006 Barcelona, Spain",lat:41.40354,lng:2.14491,summary:"Breakfast. Little play area.",emojis:"🎲☕🥐🥐🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️",cost:"$",blue:!1},{name:"El Pati Verd Sants",address:"Carrer d'Olzinelles 100, 08014 Barcelona, Spain",lat:41.37081,lng:2.13738,summary:"Lots of toys. Safe outside play area.",emojis:"🎲☕🥐🥐🍷",cost:"$",blue:!1},{name:"Mama's Corner",address:"Passatge de Lluís Pellicer, 10, 08036 Barcelona, Spain",lat:41.39303,lng:2.14946,summary:"Amazing play area with lots of toys.  Hands-off.  Oragnised activities at certain times.",emojis:"🎲🎲☕🥐🥐",cost:"$",blue:!1},{name:"Ideal",address:"C/ Marià Aguiló, 99, 08005 Barcelona, Spain",lat:41.40094,lng:2.20374,summary:"Smallish play area.  Relaxed.  Takes a while to get served.",emojis:"💺🎲☕🥐🍷",cost:"$",blue:!1},{name:"L'Atelier by amis",address:"Carrer del Joncar, 29, 08005 Barcelona, Spain",lat:41.40111,lng:2.20422,summary:"Two play areas.  Relaxed.  Great cakes.",emojis:"💺🎲☕🥐🥐🍷",cost:"$",blue:!1},{name:"Café Casa Orlandai",address:"Carrer de Jaume Piquet, 23, 08017 Barcelona, Spain",lat:41.39832,lng:2.12465,blue:!0},{name:"Bar El Convent",address:"Carrer del Comerç, 36, 08003 Barcelona, Spain",lat:41.38739,lng:2.18172,summary:"Large outside area.  Lots of space.  Running-around type place.",emojis:"💺🎲☕🥐🥐🍷",cost:"$",blue:!1}];function initMap(){var e=new google.maps.Map(document.getElementById("map"),{zoom:localStorage.getItem("mapZoom")?Number(localStorage.getItem("mapZoom")):12,center:localStorage.getItem("mapCentreLat")?{lat:Number(localStorage.getItem("mapCentreLat")),lng:Number(localStorage.getItem("mapCentreLng"))}:{lat:41.3937221351275,lng:2.158396155313767},disableDefaultUI:!0,styles:[{featureType:"poi.business",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"transit",stylers:[{visibility:"off"}]}]});return e.addListener("center_changed",function(){var a=e.getCenter();localStorage.setItem("mapCentreLat",a.lat()),localStorage.setItem("mapCentreLng",a.lng())}),e.addListener("zoom_changed",function(){localStorage.setItem("mapZoom",e.getZoom())}),e}function initMarkers(o,a){var n=new google.maps.InfoWindow,r=_.template(document.getElementById("infoWindowTemplate").innerHTML);a.forEach(function(a){var e=new google.maps.Marker({position:a,map:o});a.blue?e.setIcon("https://maps.google.com/mapfiles/ms/icons/blue-dot.png"):e.setIcon("https://maps.google.com/mapfiles/ms/icons/pink-dot.png"),e.addListener("click",function(){n.close(),a.mapsQueryParam=encodeURIComponent(a.name+" "+a.address),n.setContent(r(a)),n.open(o,e)})})}function initHelpScreen(){document.getElementById("openHelpScreen").onclick=function(){var a=document.getElementById("helpScreen");removeClass(a,"help-screen--closed"),addClass(a,"help-screen--open")},document.getElementById("closeHelpScreen").onclick=function(){var a=document.getElementById("helpScreen");removeClass(a,"help-screen--open"),addClass(a,"help-screen--closed")}}function initLocation(n){var a=null,r=document.getElementById("showLocation");r.onclick=function(){navigator.geolocation?null===a?(a=navigator.geolocation.watchPosition(l,o,{enableHighAccuracy:!0}),removeClass(r,"location-track-icon--tracking-disabled"),addClass(r,"location-track-icon--tracking-loading")):e():alert("Geolocation is not supported by this browser.")};var t=new google.maps.Marker({position:{lat:0,lng:0},visible:!1,icon:{path:google.maps.SymbolPath.CIRCLE,fillColor:"#4285f4",fillOpacity:1,strokeColor:"#fff",strokeOpacity:1,strokeWeight:2,scale:6,labelOrigin:new google.maps.Point(0,3)}});function e(){navigator.geolocation.clearWatch(a),t.setVisible(!1),a=null,removeClass(r,"location-track-icon--tracking-loading"),removeClass(r,"location-track-icon--tracking-enabled"),addClass(r,"location-track-icon--tracking-disabled")}function o(a){e()}function l(a){var e,o;removeClass(r,"location-track-icon--tracking-loading"),addClass(r,"location-track-icon--tracking-enabled"),e=a,o=new google.maps.LatLng(e.coords.latitude,e.coords.longitude),n.setCenter(o),t.setMap(n),t.setPosition(o),t.setLabel({color:"#4285f4",text:"within "+e.coords.accuracy.toString().split(".")[0]+" meters",fontWeight:"bold",fontSize:"10px"}),t.setVisible(!0),window.anthony=t}}function openVenueFeedback(a,e){popupTypeform("https://sennett.typeform.com/to/cCijNO?placename="+encodeURIComponent(a)+"&placeaddress="+encodeURIComponent(e))}function openFeedbackForm(a){popupTypeform("https://sennett.typeform.com/to/v0LtSr?source="+a)}function popupTypeform(a){var e=typeformEmbed.makePopup(a,{autoClose:3e3,hideHeaders:!0,hideFooters:!0,onSubmit:function(){setTimeout(function(){e.close()},3e3)}});e.open()}function initApp(){var a=initMap();initMarkers(a,restaurants),initHelpScreen(),initLocation(a)}
+</script>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="layout__top top-bar">
+            <button class="top-bar__help" id="openHelpScreen">
+                ?
+            </button>
+            <button class="top-bar__feedback" onclick="openFeedbackForm('top-bar'); return false;">
+                Got feedback? hello
+            </button>
+            <div class="top-bar__location location-track-icon--tracking-disabled" id="showLocation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"  class="top-bar__location location-track-icon__toggler"><path d="M256 0C153.755 0 70.573 83.182 70.573 185.426c0 126.888 165.939 313.167 173.004 321.035 6.636 7.391 18.222 7.378 24.846 0 7.065-7.868 173.004-194.147 173.004-321.035C441.425 83.182 358.244 0 256 0zM256 278.719c-51.442 0-93.292-41.851-93.292-93.293S204.559 92.134 256 92.134s93.291 41.851 93.291 93.293S307.441 278.719 256 278.719z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="top-bar__location location-track-icon__loader"><path fill="#fff" d="M73 50c0-12.7-10.3-23-23-23S27 37.3 27 50m3.9 0c0-10.5 8.5-19.1 19.1-19.1S69.1 39.5 69.1 50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg>
+            </div>
+        </div>
+        
+        <div id="map" class="layout__map"></div>
+    </div>
+    <div class="help-screen help-screen--closed" id="helpScreen">
+        <div class="help-screen__close" id="closeHelpScreen">
+            ✕
+        </div>
+        <figure class="help-screen__tantrum captioned-image">
+            <img src="img/tantrum.png" alt="picture of a kid causing a damned fuss" class="captioned-image__image" />
+            <figcaption class="captioned-image__caption">Yay.</figcaption>
+        </figure>
+        <p>
+            You're walking around town trying to "enjoy a day out with the family", and Little Johnny starts throwing
+            a hissy-fit about something. Staying in the flat wasn't an option, and now it seems that out of the house isn't good
+            enough either. What's a parent to do when all they want is a moment to forget?
+        </p>
+        <p>
+            That's where this list comes in. It's a list of places where it is not merely accpetable to bring kids, <strong>but actually easy</strong>.
+            In this list you'll find:
+        </p>
+        <ul>
+            <li>Bars with play areas</li>
+            <li>Play areas next to bars</li>
+            <li>Restaurants with colouring-in stations</li>
+            <li>Restaurants with child-care (seriously)</li>
+            <li>Highchairs</li>
+            <li>Changing stations</li>
+            <li>Anything that stops you destroying their minds with creepy Youtube videos</li>
+        </ul>
+        <p>
+            In short, anywhere you can easily relax with food (or a stiff drink) whilst not holding a child will feature. In this list, kids fit around adults,
+            but they also leave you alone.
+        </p>
+        <figure class="help-screen__booze captioned-image">
+            <img src="img/yes.jpg" class="captioned-image__image" alt="alcohol + kids =? win" />
+            <figcaption class="captioned-image__caption">😉👍</figcaption>
+        </figure>
+        <p><a href="#" onclick="openFeedbackForm('post-brand'); return false;">Does this resonate?</a></p>
+        
+        <h1>Key</h1>
+        <p>This is what the emojis mean:</p>
+        <dl class="help-screen__key">
+            <dt>💺</dt>
+            <dd><em>Highchairs.</em> The more 💺, the more highchairs are generally available.</dd>
+            <dt>🎲</dt>
+            <dd>Denotes a <em>playarea</em> close to adult seating.  More 🎲 means increasing ease in this area, up to and including dedicated child-care.</dd>
+            <dt>☕</dt>
+            <dd>Reasonable <em>coffee</em>.  Most places have coffee.</dd>
+            <dt>🥐</dt>
+            <dd>Good <em>breakfast-type things</em>, pastries etc.</dd>
+            <dt>🍷</dt>
+            <dd><em>Alcohol</em>.  The more 🍷 the merrier.</dd>
+            <dt>🍽️</dt>
+            <dd><em>Food</em>.  More is better if people need a proper meal.</dd>
+            <dt>💩</dt>
+            <dd>Ease of <em>changing</em>.  💩 = bench or wall or similar outside, close by.  💩💩 = dedicated changing station.</dd>
+        </dl>
+        <p>The more an emoji is repeated, the better that place is at that thing.</p>
+        <a href="#" onclick="openFeedbackForm('post-emoji-key'); return false;">Useful?</a>
+
+        <h1>Credits</h1>
+        <p>Images by <a href="http://www.sierradanielle.com/">Sierra Danielle</a> and <a href="https://everythingontap.com">Everything on Tap</a>.</p>
+        <p>Location icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</p>
+        <p>Location loading icon by  Nikhil Krishnan (@nikhil8krishnan). <a href="https://codepen.io/nikhil8krishnan">https://codepen.io/nikhil8krishnan</a>.</p>
+    </div>
+
+    <script type="text/html" id="infoWindowTemplate">
+        <div class="location-info-box">
+            <strong class="location-info-box__heading"><%= name %></strong>
+            <% if (blue) { %><p>Not much is known about this place, but it came recommended.</p> <% } %>
+            <% if (!blue) { %>
+                <p><strong><%= cost %></strong> - <%= emojis %></p>
+                <p><%= summary %></p>
+            <% } %>
+            <p><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=<%= mapsQueryParam %>">Open in Google Maps</a></p>
+            <p>Not helpful?  Described badly?  <a class="feedbackForm" onclick="openVenueFeedback('<%= name %>', '<%= address %>'); return false;" href="#">Feedback here.</a></p>
+        </div>
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR9P_UyRtqQdYBlx6IZkju8jSgO8iWzk4&callback=initApp">
+    </script>
+</body>
+
+</html>
