@@ -1,5 +1,5 @@
 #!/bin/bash
-echo not complete
+echo not complete - for now, build using build.js, manually stage and commit files in /docs for now, then push to origin master
 exit 1
 set -e
 
