@@ -37,10 +37,13 @@
     float: left;
     width: 40%;
     margin: 0 1em 0.9em 0;
+    max-width: 200px;
 }
 
 .help-screen__booze {
     width: 100%;
+    max-width: 200px;
+    float: right;
 }
 
 .help-screen__key dt {
