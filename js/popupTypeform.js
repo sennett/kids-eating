@@ -1,5 +1,5 @@
 function popupTypeform (tfUrl) {
-    const embedInstance = typeformEmbed.makePopup(tfUrl, {
+    var embedInstance = typeformEmbed.makePopup(tfUrl, {
         autoClose: 3000, // not working
         hideHeaders: true, // neither of these work
         hideFooters: true, // neither of these work

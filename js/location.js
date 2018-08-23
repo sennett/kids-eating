@@ -1,9 +1,9 @@
 function initLocation(map) {
     var locationTrackingId = null
-    const locationToggler = document.getElementById("showLocation")
+    var locationToggler = document.getElementById("showLocation")
     locationToggler.onclick = handleLocationClick
 
-    const locationMarker = new google.maps.Marker({
+    var locationMarker = new google.maps.Marker({
         // latlng are required, but don't care where this is initially -
         // not displayed until user manually updates their location.
         position: { lat: 0, lng: 0 },
@@ -59,7 +59,7 @@ function initLocation(map) {
     }
 
     function updateMap(position) {
-        const currentLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+        var currentLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
         map.setCenter(currentLocation)
         locationMarker.setMap(map)
         locationMarker.setPosition(currentLocation)
