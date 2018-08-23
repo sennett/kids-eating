@@ -1,0 +1,25 @@
+{
+  "name": "kids-eating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sennett/kids-eating.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sennett/kids-eating/issues"
+  },
+  "homepage": "https://github.com/sennett/kids-eating#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "replace-in-file": "^3.4.2",
+    "shelljs": "^0.8.2",
+    "uglify-js": "^3.4.7"
+  }
+}
