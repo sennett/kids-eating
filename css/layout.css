@@ -15,8 +15,19 @@ html, body {
 }
 
 .layout__map {
-    height: 90%;
+    height: 80%;
     width: 100%;
-    border-top: solid 0.5vh #fac9fc;
+    border-top: solid 0.3vh #e2a7e5;
     box-sizing: border-box;
+}
+
+.layout__bottom {
+    height: 10%;
+    width: 100%;
+}
+
+.feedback-main-screen {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
 }

@@ -1,6 +1,6 @@
 .top-bar {
-    text-align: center;
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .top-bar__help, .top-bar__feedback, .top-bar__location {
@@ -8,21 +8,18 @@
 }
 
 .top-bar__help {
-    float: left;
     height: 10vh;
     width: 10vh;
     font-size: 7vh;
+    cursor: pointer;
 }
 
-.top-bar__feedback {
-    width: 50vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.top-bar__tagline {
+    flex: 1;
+    text-align: center;
 }
 
 .top-bar__location {
     height: 100%;
-    float: right;
+    cursor: pointer;
 }
