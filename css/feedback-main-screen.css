@@ -1,0 +1,19 @@
+.feedback-main-screen {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    font-size: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-main-screen__icon {
+    height: 70%;
+    fill: white !important;
+}
+
+.feedback-main-screen__text,
+.feedback-main-screen__icon {
+    margin: 0 1.2vh;
+}
