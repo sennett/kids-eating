@@ -4,7 +4,12 @@ var restaurants = [{
     lat: 41.403922,
     lng: 2.172328,
     summary: "Great play area. Rather touristy. Average food for the price.",
-    emojis: "💺🎲🍷🍷🍽️",
+    amenities: {
+        highchairs: 1,
+        playarea: 1,
+        alcohol: 2,
+        meals: 1
+    },
     cost: "$$$",
     blue: false
 }, {
@@ -13,7 +18,15 @@ var restaurants = [{
     lat: 41.390185,
     lng: 2.170693,
     summary: "Great play area. Good for brunch. Big toadstools.",
-    emojis: "🎲☕🍷🥐🍽️",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        snacks: 1,
+        alcohol: 1,
+        meals: 1,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -22,7 +35,15 @@ var restaurants = [{
     lat: 41.391311,
     lng: 2.140709,
     summary: "Great play area. Good for brunch. Harry Potter themed.",
-    emojis: "🎲☕🍷🥐🍽️",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        snacks: 1,
+        alcohol: 1,
+        meals: 1,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -31,7 +52,15 @@ var restaurants = [{
     lat: 41.387115,
     lng: 2.133945,
     summary: "Great play area. Small but tasty menu.",
-    emojis: "🎲☕🍷🥐🍽️💩💩",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 1,
+        meals: 1,
+        changing: 2
+    },
     cost: "$$",
     blue: false
 }, {
@@ -40,7 +69,15 @@ var restaurants = [{
     lat: 41.396830,
     lng: 2.126869,
     summary: "Great play area. Small but tasty menu.",
-    emojis: "🎲☕🍷🥐🍽️💩💩",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 1,
+        meals: 1,
+        changing: 1
+    },
     cost: "$$",
     blue: false
 }, {
@@ -48,8 +85,16 @@ var restaurants = [{
     address: "Carrer del Rosselló, 360, 08025 Barcelona",
     lat: 41.403563,
     lng: 2.171249,
-    summary: "Great play area. Good tea selection. Pastry-style snacks only.",
-    emojis: "🎲☕🥐",
+    summary: "Great play area, with room for strollers. Good tea selection. Pastry-style snacks only.",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 0,
+        snacks: 1,
+        meals: 0,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -58,7 +103,15 @@ var restaurants = [{
     lat: 41.408517,
     lng: 2.175085,
     summary: "Nice food. Chilled out.  Lunch/dinner.",
-    emojis: "💺🍷🍽️",
+    amenities: {
+        highchairs: 1,
+        playarea: 0,
+        coffee: 0,
+        alcohol: 1,
+        snacks: 0,
+        meals: 1,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -67,7 +120,15 @@ var restaurants = [{
     lat: 41.387935,
     lng: 2.178699,
     summary: "Good sushi. Excellent child-care. Lunch/dinner.",
-    emojis: "💺💺🎲🎲🍷🍷🍽️🍽️☕",
+    amenities: {
+        highchairs: 2,
+        playarea: 2,
+        coffee: 1,
+        alcohol: 2,
+        snacks: 0,
+        meals: 2,
+        changing: 1
+    },
     cost: "$$$",
     blue: false
 }, {
@@ -82,7 +143,15 @@ var restaurants = [{
     lat: 41.400914,
     lng: 2.204891,
     summary: "Good food. Lots of space.",
-    emojis: "💺🍷🍷🍽️☕💩",
+    amenities: {
+        highchairs: 1,
+        playarea: 0,
+        coffee: 1,
+        alcohol: 2,
+        snacks: 0,
+        meals: 1,
+        changing: 1
+    },
     cost: "$$",
     blue: false
 }, {
@@ -97,7 +166,15 @@ var restaurants = [{
     lat: 41.402534,
     lng: 2.158083,
     summary: "Reasonable Thai food. Walled playpark outside.",
-    emojis: "🎲🍷🍽️☕",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 0,
+        meals: 1,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -106,7 +183,15 @@ var restaurants = [{
     lat: 41.403251,
     lng: 2.159088,
     summary: "Good for brunch. Nice outdoors area.",
-    emojis: "🎲🍷🍽️☕",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 1,
+        meals: 1,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -115,7 +200,15 @@ var restaurants = [{
     lat: 41.399137,
     lng: 2.172376,
     summary: "Good for brunch. Lovely lady running it. Jolly.",
-    emojis: "☕🥐🥐🍽️",
+    amenities: {
+        highchairs: 0,
+        playarea: 0,
+        coffee: 1,
+        alcohol: 0,
+        snacks: 2,
+        meals: 1,
+        changing: 1
+    },
     cost: "$$",
     blue: false
 }, {
@@ -124,7 +217,15 @@ var restaurants = [{
     lat: 41.402840,
     lng: 2.161110,
     summary: "Snacks. Outside. Next to a gated playpark.",
-    emojis: "☕🎲🍷🥐️",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 1,
+        meals: 0,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -139,7 +240,15 @@ var restaurants = [{
     lat: 41.402552,
     lng: 2.158858,
     summary: "Somewhat random selection of food.  Slightly hectic and not much space.",
-    emojis: "🎲☕🥐",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 0,
+        snacks: 1,
+        meals: 0,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -160,7 +269,15 @@ var restaurants = [{
     lat: 41.384393,
     lng: 2.156114,
     summary: "Japonese. Fantastic food and staff. Kids will eat edamame for days. Probably you should reserve.",
-    emojis: "💺🎲☕🍷🍽️️️️️️️️️️🍽️️️️️️️️️️💩",
+    amenities: {
+        highchairs: 1,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 0,
+        meals: 2,
+        changing: 1
+    },
     cost: "$$",
     blue: false
 }, {
@@ -169,7 +286,15 @@ var restaurants = [{
     lat: 41.392327,
     lng: 2.158821,
     summary: "Good Thai food.  Lovely staff.",
-    emojis: "💺🍷🍽️️️️️️️️️️🍽️️️️️️️️️️",
+    amenities: {
+        highchairs: 1,
+        playarea: 0,
+        coffee: 0,
+        alcohol: 1,
+        snacks: 0,
+        meals: 2,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -179,6 +304,15 @@ var restaurants = [{
     lng: 2.162293,
     summary: "Touristy, uptight, expensive.  Only included because of the changing station.",
     emojis: "☕🍷🍽️💩💩",
+    amenities: {
+        highchairs: 0,
+        playarea: 0,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 0,
+        meals: 1,
+        changing: 2
+    },
     cost: "$$$$",
     blue: false
 }, {
@@ -199,7 +333,15 @@ var restaurants = [{
     lat: 41.401000,
     lng: 2.123150,
     summary: "Catalan food. Decent terrace next to municipal play area.  AC.  Might be a short wait to sit outside.",
-    emojis: "🎲☕🍷🍽️️️️️️️️️️💩",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 0,
+        meals: 1,
+        changing: 1
+    },
     cost: "$$$",
     blue: false
 }, {
@@ -208,7 +350,15 @@ var restaurants = [{
     lat: 41.437330,
     lng: 2.188230,
     summary: "Catalan food. A few outside tables next to municipal play area. Might be a short wait to sit outside.",
-    emojis: "🎲☕🍷🍽️️️️️️️️️️💩",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 0,
+        meals: 1,
+        changing: 1
+    },
     cost: "$$",
     blue: false
 }, {
@@ -217,7 +367,15 @@ var restaurants = [{
     lat: 41.3879100,
     lng: 2.135390,
     summary: "Quick bite/drink. Terrace next to municipal play area.",
-    emojis: "🎲☕🍷🍽️️️️️️️️️️💩",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 0,
+        meals: 1,
+        changing: 1
+    },
     cost: "$$",
     blue: false
 }, {
@@ -226,7 +384,15 @@ var restaurants = [{
     lat: 41.402310,
     lng: 2.156230,
     summary: "Good Asian-fusion. Playarea with person looking after the kids!  Truly hands-off.",
-    emojis: "🎲🎲☕🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️🍽️️️️️️️️️️️️️️️",
+    amenities: {
+        highchairs: 0,
+        playarea: 2,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 0,
+        meals: 2,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -235,7 +401,15 @@ var restaurants = [{
     lat: 41.403710,
     lng: 2.157670,
     summary: "Lots of space, kids toys and books, and a piano.",
-    emojis: "🎲☕🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 0,
+        meals: 1,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -244,7 +418,15 @@ var restaurants = [{
     lat: 41.403540,
     lng: 2.144910,
     summary: "Breakfast. Little play area.",
-    emojis: "🎲☕🥐🥐🍷🍽️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 2,
+        meals: 1,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -253,7 +435,15 @@ var restaurants = [{
     lat: 41.370810,
     lng: 2.137380,
     summary: "Lots of toys. Safe outside play area.",
-    emojis: "🎲☕🥐🥐🍷",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 2,
+        meals: 0,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -261,8 +451,12 @@ var restaurants = [{
     address: "Passatge de Lluís Pellicer, 10, 08036 Barcelona, Spain",
     lat: 41.393030,
     lng: 2.149460,
-    summary: "Amazing play area with lots of toys.  Hands-off.  Oragnised activities at certain times.",
-    emojis: "🎲🎲☕🥐🥐",
+    summary: "Amazing play area with lots of toys.  Hands-off.  Organised activities at certain times.",
+    amenities: {
+        playarea: 2,
+        coffee: 1,
+        snacks: 2
+    },
     cost: "$$",
     blue: false
 }, {
@@ -271,7 +465,15 @@ var restaurants = [{
     lat: 41.400940,
     lng: 2.203740,
     summary: "Smallish play area.  Relaxed.  Takes a while to get served.",
-    emojis: "💺🎲☕🥐🍷",
+    amenities: {
+        highchairs: 1,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 1,
+        meals: 0,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -280,7 +482,15 @@ var restaurants = [{
     lat: 41.401110,
     lng: 2.204220,
     summary: "Two play areas.  Relaxed.  Great cakes.",
-    emojis: "💺🎲☕🥐🥐🍷",
+    amenities: {
+        highchairs: 1,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 2,
+        meals: 0,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }, {
@@ -295,10 +505,15 @@ var restaurants = [{
     lat: 41.387390,
     lng: 2.181720,
     summary: "Large outside area.  Lots of space.  Running-around type place.",
-    emojis: "💺🎲☕🥐🥐🍷",
+    amenities: {
+        highchairs: 1,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 2,
+        meals: 0,
+        changing: 0
+    },
     cost: "$$",
     blue: false
 }]
-
-
-// highchairs, alcholo, playarea, food, cafe/restaurant, space, changing mat    💺🎲☕🥐🍷🍽️💩      -
