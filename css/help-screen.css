@@ -45,6 +45,7 @@
     width: 100%;
     max-width: 350px;
     float: right;
+    margin: 30px 0 50px 0;
 }
 
 .help-screen__key dt {
