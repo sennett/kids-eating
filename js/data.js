@@ -516,4 +516,92 @@ var restaurants = [{
     },
     cost: "$$",
     blue: false
+}, {
+    name: "Cafè Godot",
+    address: "Carrer de Sant Domènec, 19, 08012 Barcelona, Spain",
+    lat: 41.400140,
+    lng: 2.156930,
+    summary: "Good food and drink. Excellent ambience.",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 2,
+        snacks: 0,
+        meals: 2,
+        changing: 0
+    },
+    cost: "$$$",
+    blue: false
+}, {
+    name: "El Cau",
+    address: "Carrer de Villarroel, 237, 08036 Barcelona, Spain",
+    lat: 41.391270,
+    lng: 2.148560,
+    summary: "More kid-oriented than most.  Good place to burn energy.  It's normal to reserve here, so only check out if you're passing by on the off-chance there's a spot.",
+    amenities: {
+        highchairs: 0,
+        playarea: 3,
+        coffee: 1,
+        alcohol: 0,
+        snacks: 1,
+        meals: 0,
+        changing: 1
+    },
+    cost: "$$",
+    blue: false
+}, {
+    name: "Peek-a-Boo Parque Infantil",
+    address: "Carrer de Santaló, 128-130, 08021 Barcelona, Spain",
+    plusCode: "94XR+W7 Barcelona, Spain",
+    lat: 41.399750,
+    lng: 2.140820,
+    summary: "More kid-oriented than most.  Lots of kid's activities.  Small entrance fee.",
+    amenities: {
+        highchairs: 0,
+        playarea: 3,
+        coffee: 1,
+        alcohol: 0,
+        snacks: 1,
+        meals: 0,
+        changing: 0
+    },
+    cost: "$$",
+    blue: false
+}, {
+    name: "Ribs Doctor Fleming",
+    address: "Carrer del Dr. Fleming, 10, 08017 Barcelona, Spain",
+    plusCode: "94VP+86 Barcelona, Spain",
+    lat: 41.393360,
+    lng: 2.135489,
+    summary: "Faux American restaurant. Average food.  Outside play area.",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 2,
+        snacks: 1,
+        meals: 1,
+        changing: 0
+    },
+    cost: "$$",
+    blue: false
+}, {
+    name: "TOTORA",
+    address: "Carrer de Còrsega, 235, 08036 Barcelona, Spain",
+    plusCode: "95R3+V8 Barcelona, Spain",
+    lat: 41.392110,
+    lng: 2.153310,
+    summary: "Peruvian. Good food.",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 1,
+        snacks: 1,
+        meals: 2,
+        changing: 0
+    },
+    cost: "$$$",
+    blue: false
 }]
