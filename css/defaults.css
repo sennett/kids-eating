@@ -24,6 +24,7 @@ button {
     background-color: #e2a7e5;
     border:none;
     color: white;
+    border-radius: 0;
 }
 
 h1 {
