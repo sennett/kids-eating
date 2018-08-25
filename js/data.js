@@ -604,4 +604,22 @@ var restaurants = [{
     },
     cost: "$$$",
     blue: false
+}, {
+    name: "Restaurant Clotilda",
+    address: "Carrer de Sant Joan, 44, 08202 Sabadell, Barcelona, Spain",
+    plusCode: "G4W5+VV Sabadell, Spain",
+    lat: 41.547200,
+    lng: 2.109700,
+    summary: "Good outdoor terrace with toys.  Good beer selection.",
+    amenities: {
+        highchairs: 0,
+        playarea: 1,
+        coffee: 1,
+        alcohol: 2,
+        snacks: 1,
+        meals: 1,
+        changing: 0
+    },
+    cost: "$$",
+    blue: false
 }]
